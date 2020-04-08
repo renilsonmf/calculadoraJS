@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    div {
+        padding: 10px;
+    }
+  
+    select{
+        width: 100px
+    }
+
+</style>
+
+<body>
+    <h1>Calculadora</h1>
+
+    <div>
+        <label for="1">Insira o primeiro numero:<input type="text" name="numero1" id="texto1"></label>
+    </div>
+    <div>
+        <label for="2">Insira o Segundo numero:<input type="text" name="numero2" id="texto2"></label>
+    </div>
+    <div>
+        <button onclick="executarOperacao('+')">Somar</button>
+        <button onclick="executarOperacao('-')">Subtrair</button>
+        <button onclick="executarOperacao('/')">Dividir</button>
+        <button onclick="executarOperacao('*')">Multiplicar</button>
+
+    </div>
+
+    <div>
+        <label for="Resultado"> Resultado </label>
+        <input type="number" name="resultado" id="resultado">
+    </div>
+
+
+    <script>
+        function executarOperacao(operacao){
+            var n1 = +document.getElementById("texto1").value
+            var n2 = +document.getElementById("texto2").value
+
+            var resultadoOperacao; 
+            switch (operacao){
+                case '+': resultadoOperacao = n1 + n2; break;
+                case '-': resultadoOperacao = n1 - n2; break;
+                case '/': resultadoOperacao = n1 / n2; break;
+                case '*': resultadoOperacao = n1 * n2; break;
+            }
+
+            var resultado = document.getElementById("resultado");
+            resultado.value = resultadoOperacao;
+        }
+    
+       
+
+          
+                 
+    
+
+    </script>
+</body>
+
+</html>
